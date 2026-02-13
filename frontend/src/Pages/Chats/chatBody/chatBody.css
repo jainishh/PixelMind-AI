@@ -1,0 +1,148 @@
+/* Markdown Content inside AI Message */
+.markdown-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    /* slate-200 */
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+    color: #f8fafc;
+    /* slate-50 */
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content h1 {
+    font-size: 1.5em;
+}
+
+.markdown-content h2 {
+    font-size: 1.25em;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.3em;
+}
+
+.markdown-content h3 {
+    font-size: 1.1em;
+}
+
+.markdown-content p {
+    margin-bottom: 1em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+}
+
+.markdown-content ol {
+    list-style-type: decimal;
+}
+
+.markdown-content li {
+    margin-bottom: 0.25em;
+}
+
+.markdown-content a {
+    color: #38bdf8;
+    /* sky-400 */
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid #64748b;
+    /* slate-500 */
+    padding-left: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #cbd5e1;
+    /* slate-300 */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    overflow-x: auto;
+    display: block;
+}
+
+.markdown-content th,
+.markdown-content td {
+    border: 1px solid #475569;
+    /* slate-600 */
+    padding: 0.5em;
+    text-align: left;
+}
+
+.markdown-content th {
+    background-color: #334155;
+    /* slate-700 */
+    font-weight: 600;
+}
+
+.markdown-content tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.markdown-content hr {
+    border: 0;
+    border-top: 1px solid #475569;
+    /* slate-600 */
+    margin: 2em 0;
+}
+
+/* Helper for inline code not handled by syntax highlighter */
+.markdown-content :not(pre)>code {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f472b6;
+    /* pink-400 */
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.animate-linear-gradient {
+    background: linear-gradient(90deg, #ec4899, #a855f7, #ec4899);
+    background-size: 250% 100%;
+    animation: linearGradientMove 1.6s linear infinite;
+}
+
+@keyframes linearGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 250% 50%;
+    }
+}
+
+
+.shadow-loader {
+    box-shadow:
+        0 0 15px rgba(236, 72, 153, 0.7),
+        0 0 25px rgba(168, 85, 247, 0.6),
+        0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}

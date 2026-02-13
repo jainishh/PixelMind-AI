@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
+
+/* Body */
+/* body {
+  min-height: 100vh;
+  background: #0a0e27;
+  overflow: hidden;
+} */
+
+
+/* FULLSCREEN GRID BACKGROUND */
+section {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  gap: 2px;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #0a0e27;
+  overflow: hidden;
+}
+
+/* Animated gradient overlay */
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #38bdf8,
+    #c084fc,
+    transparent
+  );
+  animation: animate 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Grid cells */
+section span {
+  background: #111827;
+
+  z-index: 2;
+  transition: background 0.8s;
+}
+
+section span:hover {
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+  transition: 0s;
+}
+
+
+/* SIGN IN CARD */
+.signin {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  padding: 35px;
+  background: #111827;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 212, 255, 0.25); */
+
+  /* CENTER FIX */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.signin .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Title */
+.signin h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    to right,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 
+   FORM*/
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 20px 15px 8px;
+  background: #1a2346;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  color: #fff;
+  font-size: 0.95em;
+  outline: none;
+  transition: 0.3s;
+}
+
+.inputBox input:focus {
+  border-color: linear-gradient(
+    to right,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+  background: #1f2952;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a8ab8;
+  font-size: 0.9em;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.inputBox input:focus ~ i,
+.inputBox input:valid ~ i {
+  top: 12px;
+  font-size: 0.75em;
+  color: linear-gradient(
+    to right,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+  font-weight: 600;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.links a {
+  color: #8fa4d4;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: linear-gradient(
+    to right,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+}
+
+/* Button */
+input[type="submit"] {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    #38bdf8,
+    /* sky-400 */ #c084fc /* purple-400 */
+  );
+  /* box-shadow: 0 10px 25px rgba(0, 212, 255, 0.35); */
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.45);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+  .signin {
+    width: 90%;
+  }
+
+  section {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-auto-rows: 60px;
+  }
+}
